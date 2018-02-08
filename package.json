@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "RESTful blogapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyhhuang/blog.git"
+  },
+  "author": "Emily Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyhhuang/blog/issues"
+  },
+  "homepage": "https://github.com/eyhhuang/blog#readme",
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
