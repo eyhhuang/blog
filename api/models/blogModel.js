@@ -5,20 +5,36 @@ var Schema = mongoose.Schema;
 var PostSchema = new Schema({
   title:{
     type: String,
-    required("What's the title of your post?")
+    required: true
   },
-  // message:{
-  //   type:String,
-  //   required("What's the content of your post?")
-  // },
-  Created_date:{
+  author:{
+    type:String,
+    required:true
+  }
+   message:{
+    type:String,
+    required: true
+  },
+  created_date:{
     type: Date,
     default: Date.now
+  },
+  comment:[
+    user:{
+      type:String,
+      required: true
+    }
+    message:{
+      type:String,
+      required:true
+    }
+    created_date:{
+      type: Date,
+      default: Date.now
+    }
+  ]
+    type: map,
+    default: NULL
   }
-  // allowComment:{
-  //   type: Boolean,
-  //   required("Would you like to allow commenting?"),
-  //   default: true
-  // }
 });
-module.exports = mongoose.Model('Posts', PostSchema);
+module.exports = mongoose.model('Posts', PostSchema);
